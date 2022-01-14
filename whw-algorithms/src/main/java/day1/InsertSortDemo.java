@@ -1,4 +1,4 @@
-package compute.day1;
+package day1;
 
 import compute.util.StudySortUtil;
 
@@ -19,7 +19,7 @@ public class InsertSortDemo {
     }
 
 
-    private static void insertSort(int[] arr) {
+    public static void insertSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }

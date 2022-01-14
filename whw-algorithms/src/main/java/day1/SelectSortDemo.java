@@ -1,4 +1,4 @@
-package compute.day1;
+package day1;
 
 import compute.util.StudySortUtil;
 
@@ -20,7 +20,7 @@ public class SelectSortDemo {
         System.out.println(Arrays.toString(arr));
     }
 
-    private static void selectSort(int[] arr) {
+    public static void selectSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }

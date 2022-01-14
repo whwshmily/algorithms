@@ -1,4 +1,4 @@
-package compute.day1;
+package day1;
 
 import compute.util.StudySortUtil;
 
@@ -17,7 +17,7 @@ public class BubbleSortDemo_maopao {
         StudySortUtil.printArr(arr);
     }
 
-    private static void bubbleSort(int[] arr) {
+    public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
@@ -25,14 +25,14 @@ public class BubbleSortDemo_maopao {
         int end = arr.length - 1;
 
         for (int i = end; i >= 0; i--) {  // 每一次循环找到最大的数当前循环最后的位置
-            // 1 2 每一次都和他后面的数比较 大的往后排
-            // 3 4
-            // 5 6
-            for (int second = i - 1; second >= 0; second--) { //挨个比较 最大的数往后排
-                if (arr[i] < arr[second]) {
-                    StudySortUtil.swap(arr, i, second);
+
+            for (int j = 1; j <= i; j++) { //每循环完一次 就会找到一个最大的数放入相对最后的位置
+                //两两比较 大的往后面换
+                if (arr[j] < arr[j - 1]) {
+                    StudySortUtil.swap(arr, j, j - 1);
                 }
             }
+
         }
 
 
